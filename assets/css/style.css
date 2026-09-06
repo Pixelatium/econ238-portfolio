@@ -1,0 +1,198 @@
+/* ---------------------------------------------------------------------------
+   ECON 238 portfolio styles.
+   Priorities, in order: readable body text, clear heading hierarchy, links that
+   are visible without shouting. No decoration for its own sake.
+   --------------------------------------------------------------------------- */
+
+:root {
+  --ink:        #1a1a1a;  /* body text */
+  --ink-muted:  #5c5c5c;  /* bylines, footer, captions */
+  --rule:       #e2e2e2;  /* hairlines */
+  --link:       #1a4f8a;  /* deep blue: visible against black, not neon */
+  --link-hover: #0d2f55;
+  --paper:      #fdfdfc;  /* very slightly warm white, easier than pure #fff */
+}
+
+/* border-box makes padding behave predictably inside width limits. */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  /* System font stack: renders in the OS's native UI face, so it looks
+     intentional on every platform without downloading a webfont. */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.125rem;   /* 18px base — comfortable for sustained reading */
+  line-height: 1.7;      /* generous leading; the single biggest readability win */
+  -webkit-text-size-adjust: 100%;
+}
+
+/* The measure. ~34rem holds roughly 65-75 characters per line, which is the
+   range typography research consistently lands on for reading comfort. */
+main {
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+/* --- header / footer ----------------------------------------------------- */
+
+.site-header {
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 0;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+}
+.site-header a {
+  color: var(--ink-muted);
+  text-decoration: none;
+}
+.site-header a:hover { color: var(--ink); }
+
+.site-footer {
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+  border-top: 1px solid var(--rule);
+  color: var(--ink-muted);
+  font-size: 0.875rem;
+}
+
+/* --- headings ------------------------------------------------------------ */
+/* Sizes step down clearly so structure is obvious at a glance. Tighter
+   line-height than body text, because large type needs less leading. */
+
+h1, h2, h3 {
+  line-height: 1.25;
+  font-weight: 700;
+  margin: 2.5rem 0 0.75rem;
+}
+h1 {
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+  margin-top: 1rem;
+}
+h2 {
+  font-size: 1.375rem;
+  margin-top: 2.75rem;
+}
+h3 {
+  font-size: 1.125rem;
+  color: var(--ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+p { margin: 0 0 1.25rem; }
+
+/* --- links --------------------------------------------------------------- */
+/* Underlined rather than color-only: colorblind readers and anyone skimming
+   can still tell what's a link. The offset keeps the rule off the letterforms. */
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+a:hover { color: var(--link-hover); }
+
+/* Keyboard focus must stay visible for accessibility. */
+a:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+/* --- quotes, lists, rules ------------------------------------------------ */
+
+blockquote {
+  margin: 1.75rem 0;
+  padding-left: 1.25rem;
+  border-left: 3px solid var(--rule);
+  color: var(--ink-muted);
+  font-style: italic;
+}
+
+ul, ol { padding-left: 1.5rem; margin: 0 0 1.25rem; }
+li { margin-bottom: 0.5rem; }
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 3rem 0;
+}
+
+/* --- images and figures -------------------------------------------------- */
+/* Images never overflow their container, and never stretch: `height: auto`
+   preserves the aspect ratio when width is constrained on small screens. */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2rem auto;
+}
+
+figure { margin: 2rem 0; }
+figcaption {
+  font-size: 0.875rem;
+  color: var(--ink-muted);
+  line-height: 1.5;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* Video embeds: the padding-bottom trick keeps a 16:9 box that scales with
+   the container, so iframes stay proportional on phones. */
+.video-embed {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin: 2rem 0;
+}
+.video-embed iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: 0;
+}
+
+/* --- sources ------------------------------------------------------------- */
+/* Citation list set smaller and quieter than body copy: present and checkable,
+   but it doesn't compete with the argument. */
+
+.sources, main > h2#sources + ul {
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--ink-muted);
+}
+.sources a { color: var(--link); }
+
+/* --- small screens ------------------------------------------------------- */
+
+@media (max-width: 34rem) {
+  body { font-size: 1.0625rem; }  /* 17px: slightly tighter on phones */
+  h1 { font-size: 1.625rem; }
+  h2 { font-size: 1.25rem; }
+  main { padding: 1.5rem 1.125rem 3rem; }
+}
+
+/* --- print --------------------------------------------------------------- */
+/* You submit a PDF to Blackboard, so printing should produce something clean:
+   black text, no site chrome, and link targets spelled out since a printed
+   page can't be clicked. */
+
+@media print {
+  body { background: #fff; color: #000; font-size: 11pt; }
+  .site-header, .site-footer { display: none; }
+  main { max-width: none; padding: 0; }
+  a { color: #000; text-decoration: underline; }
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    word-break: break-all;
+  }
+}

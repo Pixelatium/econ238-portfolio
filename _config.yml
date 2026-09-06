@@ -1,0 +1,22 @@
+# Site-wide settings for the ECON 238 portfolio.
+# GitHub Pages reads this file automatically and rebuilds the site on every commit.
+
+title: Joshua — ECON 238 Portfolio
+description: Environmental Economics, Fall 2026, University of Rochester
+
+# Needed so links built with `relative_url` resolve correctly. A GitHub "project
+# site" lives at <username>.github.io/<repo>, so the repo name is the base path.
+url: https://pixelatium.github.io
+baseurl: /econ238-portfolio
+
+# Apply the custom layout to every page, so individual files don't each have to
+# declare `layout:` in their front matter. Keeps README.md clean on github.com.
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+# Files that shouldn't be published to the live site.
+exclude:
+  - README-notes.md

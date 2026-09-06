@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Page-specific title when set in front matter, otherwise the site title. -->
+  <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+
+  <!-- Small persistent header so any single page links back to the portfolio home. -->
+  <header class="site-header">
+    <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <p>{{ site.description }}</p>
+  </footer>
+
+</body>
+</html>
