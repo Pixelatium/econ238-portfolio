@@ -1,1 +1,5 @@
-# econ238-portfolio
+# Joshua — ECON 238 Portfolio
+
+Environmental Economics, Fall 2026, University of Rochester
+
+## Assignments
