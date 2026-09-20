@@ -160,6 +160,15 @@ figcaption {
   border: 0;
 }
 
+/* Audio player: full width of the measure so the controls are easy to hit on a
+   phone, with breathing room above and below. */
+
+audio.recording {
+  display: block;
+  width: 100%;
+  margin: 2rem 0 2.5rem;
+}
+
 /* --- sources ------------------------------------------------------------- */
 /* Citation list set smaller and quieter than body copy: present and checkable,
    but it doesn't compete with the argument. */
