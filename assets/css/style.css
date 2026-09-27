@@ -169,6 +169,16 @@ audio.recording {
   margin: 2rem 0 2.5rem;
 }
 
+/* Inline SVG charts: scale down to the column and to phone widths instead of
+   forcing the page to scroll sideways. */
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem 0 0.5rem;
+}
+
 /* --- sources ------------------------------------------------------------- */
 /* Citation list set smaller and quieter than body copy: present and checkable,
    but it doesn't compete with the argument. */
