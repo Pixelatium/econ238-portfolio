@@ -27,6 +27,9 @@ body {
   font-size: 1.125rem;   /* 18px base — comfortable for sustained reading */
   line-height: 1.7;      /* generous leading; the single biggest readability win */
   -webkit-text-size-adjust: 100%;
+  /* Long unbroken strings (source URLs, DOIs) would otherwise spill past the
+     text column and force the whole page to scroll sideways on a phone. */
+  overflow-wrap: break-word;
 }
 
 /* The measure. ~34rem holds roughly 65-75 characters per line, which is the
