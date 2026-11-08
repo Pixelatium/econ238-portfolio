@@ -11,3 +11,4 @@ Environmental Economics, Fall 2026, University of Rochester
 - [Assignment 5 (SHOW ME, my own): Electrification Can Reduce Household Energy Costs](assignment-05-electrification-household-costs.html)
 - [Assignment 8 (audio history): The Harbor Nobody Wanted To Pay For](https://josh221667.substack.com/p/the-harbor-nobody-wanted-to-pay-for) — listen or read on Substack
 - [Assignment 9 (infographic): Who Gets to Stay? — Environmental Justice, Land Rights, and the Economics of Repair](assignment-09-who-gets-to-stay.html)
+- [Assignment 10 (NOTICE card): No Grades. First Year. — a proposed Rochester MOAT](assignment-10-rochester-moat.html)
