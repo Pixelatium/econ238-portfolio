@@ -12,3 +12,5 @@ Environmental Economics, Fall 2026, University of Rochester
 - [Assignment 8 (audio history): The Harbor Nobody Wanted To Pay For](https://josh221667.substack.com/p/the-harbor-nobody-wanted-to-pay-for) — listen or read on Substack
 - [Assignment 9 (infographic): Who Gets to Stay? — Environmental Justice, Land Rights, and the Economics of Repair](assignment-09-who-gets-to-stay.html)
 - [Assignment 10 (NOTICE card): No Grades. First Year. — a proposed Rochester MOAT](assignment-10-rochester-moat.html)
+- [Assignment 11 (infographic): Solar Highways — What if the road above our cars generated electricity?](assignment-11-solar-highways-infographic.html)
+- [Assignment 11 (full report): Solar Highways — Turning America's Roads into Power Plants](assignment-11-solar-highways.html)
